@@ -6,7 +6,7 @@ I18n.fallbacks = true;
 
 I18n.translations = {
   en: {
-    name: 'Sudoku Master',
+    name: 'Portakal Sudoku',
     continue: 'Continue ',
     restart: 'Restart  ',
     newgame: 'New Game ',
@@ -33,7 +33,7 @@ I18n.translations = {
     queryerror: 'Query failed',
 
     share: 'Share',
-    sharemessage: 'Sudoku Master - for pure sudoku pleasure',
+    sharemessage: 'Portakal Sudoku - for pure sudoku pleasure',
     sharefailed: 'Share faild',
 
     rate: 'Rate this app',

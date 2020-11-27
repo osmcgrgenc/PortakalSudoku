@@ -501,7 +501,7 @@ class Main extends Component {
   };
 
   onShare = () => {
-    const url = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.liteneo.sudoku';
+    const url = 'https://osmancagrigenc.com';
     let message = I18n.t('sharemessage');
     if (Platform.OS == 'android') message = message + ' \n' + url;
     Share.share(
@@ -521,7 +521,7 @@ class Main extends Component {
   onRate = () => {
     const link =
       Platform.OS == 'android'
-        ? 'market://details?id=com.liteneo.sudoku'
+        ? 'https://osmancagrigenc.com'
         : 'itms-apps://itunes.apple.com/cn/app/id1138612488?mt=8';
     Alert.alert(I18n.t('rate'), I18n.t('ratemessage'), [
       {text: I18n.t('cancel')},

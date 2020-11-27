@@ -1,13 +1,15 @@
 'use strict';
 
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 
 function clear() {
   return AsyncStorage.clear();
 }
 
 function get(key) {
-  return AsyncStorage.getItem(key).then(value => JSON.parse(value));
+  return AsyncStorage.getItem(key)
+    .then((value) => JSON.parse(value))
+    .catch((error) => console.log(error));
 }
 
 function set(key, value) {
@@ -19,13 +21,15 @@ function remove(key) {
 }
 
 function multiGet(...keys) {
-  return AsyncStorage.multiGet([...keys]).then((stores) => {
-    let data = {};
-    stores.map((result, i, store) => {
-      data[store[i][0]] = JSON.parse(store[i][1]);
-    });
-    return data;
-  });
+  return AsyncStorage.multiGet([...keys])
+    .then((stores) => {
+      let data = {};
+      stores.map((result, i, store) => {
+        data[store[i][0]] = JSON.parse(store[i][1]);
+      });
+      return data;
+    })
+    .catch((error) => console.log(error));
 }
 
 function multiRemove(...keys) {
